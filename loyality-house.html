@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loyality House</title>
+    <link rel="stylesheet" href="./style/mainStyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-info bg-opacity-10 loyality general" id="house">
+    
+  <div id="app">
+  <header class="d-flex flex-wrap">
+      
+    <div  class="w-25 ">
+      
+      <img id="logo" src="./asets/data-insight.png" alt="logo">
+    </div>
+     <div class="w-50 justify-content-center align-items-center">
+              <h1 class="h1 text-center pt-5">Data Insight group</h1>
+    </div>
+    <div class="w-25 d-flex justify-content-center align-items-center">
+
+   
+
+      <a class="fs-4 text-decoration-none fst-italic" href="https://www.whitehouse.gov/the_press_office/TransparencyandOpenGovernment">📩Info Data Insight</a>
+    
+    </div>
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary  navbarAncho" id="navBar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+         
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Congress 113
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="./house.html">House</a></li>
+                <li><a class="dropdown-item" href="./senate.html">Senate</a></li>
+              
+              </ul>
+            </li>
+            
+          </ul>
+          <ul class="navbar-nav">
+         
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Attendance
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="./attendance-house.html">House</a></li>
+                <li><a class="dropdown-item" href="./attendance-senate.html">Senate</a></li>
+              
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+         
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Party Loyality
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="./loyality-house.html">House</a></li>
+                  <li><a class="dropdown-item" href="./loyality-senate.html">Senate</a></li>
+                
+                </ul>
+              </li>
+            </ul>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+      
+           
+      
+            <main class="d-flex col-12 flex-wrap justify-content-center justify-self-center text-justify">
+      
+              <article class="col-5  mt-4">
+                <h3 class="text-center">Party Loyalty</h3>
+                <p class ="text-justify">Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda.</p>
+                    
+              </article>
+          
+              <div class="col-5 ms-5 mt-4">
+          
+                <h3 class="text-center">House at a glance</h3>
+          
+                <table class="table table-bordered table-primary table-hover col-3 ">
+                  <thead class="table-dark ">
+                    <tr>
+                      <th class="text-center">Party</th>
+                      <th class="text-center">Number of Reps	</th>
+                      <Th class="text-center">% Voted with Prty</Th>
+                    </tr>
+                  </thead>
+          
+                  <tbody id="tablaGeneralDemocratasYRepublicanos">
+                    <tr>
+                      <td class="text-center">Democratas</td>
+                      <td class="text-center">{{D}}</td>
+                      <td class="text-center">{{votedWithPartyD}}%</td>
+          
+                    </tr>
+                
+                    <tr>
+                      <td class="text-center">Republicanos</td>
+                      <td class="text-center">{{R}}</td>
+                      <td class="text-center">{{votedWithPartyR}}%</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Independientes</td>
+                      <td class="text-center">{{I}}</td>
+                      <td class="text-center">{{votedWithPartyI || "0"}}%</td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">Total</td>
+                      <td class="text-center">{{total}}</td>
+                      <td class="text-center">{{porcentajeTotal}}%</td>
+                    </tr>
+          
+          
+                  </tbody>
+          
+                </table>
+          
+              </div>
+          
+          
+              <div class="col-5 mt-4">
+          
+                <h2>Least Loyal (Bottom 10% of Party)</h2>
+          
+                <table class="w-75 table table-bordered table-primary table-hover ">
+          
+                  <thead class="table-dark "> 
+                    <tr>
+                      <th class="text-center">Name</th>
+                      <th class="text-center">Number Party Votes</th>
+                      <th class="text-center">% Party Votes</th>
+                    </tr>
+                  </thead>
+          
+          
+                  <tbody id="menosLeal">
+
+                    <tr v-for="miembro in menosLeales">
+
+                      <td class="text-center">
+                        <a v-bind:href="miembro.url">{{miembro.first_name}} {{miembro.middle_name || " "}}
+                          {{miembro.last_name}}</a>
+                      </td>
+                      <td class="text-center">
+                        {{Math.round((miembro.total_votes*miembro.votes_with_party_pct)/100)}}
+                      </td>
+                      <td class="text-center">
+                        {{miembro.votes_with_party_pct}}%
+                      </td>
+
+
+                    </tr>
+          
+          
+          
+          
+          
+                  </tbody>
+          
+          
+          
+          
+          
+                </table>
+          
+              </div>
+          
+              <div class="col-5 ms-5 mt-4">
+          
+                <h2>Most Loyal (Top 10% of Party)</h2>
+          
+                <table class="w-75 table table-bordered table-primary table-hover ">
+          
+                  <thead class="table-dark "> 
+                    <tr>
+                      <th class="text-center">Name</th>
+                      <th class="text-center">Number Party Votes</th>
+                      <th class="text-center">% Party Votes</th>
+                    </tr>
+                  </thead>
+          
+          
+                  <tbody id="masLeal">
+
+                    <tr v-for="miembro in masLeales">
+
+                      <td class="text-center">
+                        <a v-bind:href="miembro.url">{{miembro.first_name}} {{miembro.middle_name || " "}}
+                          {{miembro.last_name}}</a>
+                      </td>
+                      <td class="text-center">
+                        {{Math.round((miembro.total_votes*miembro.votes_with_party_pct)/100)}}
+                      </td>
+                      <td class="text-center">
+                        {{miembro.votes_with_party_pct}}%
+                      </td>
+
+
+
+                    </tr>
+          
+          
+        
+                  </tbody>
+          
+          
+          
+          
+          
+                </table>
+          
+          
+          
+              </div>
+          
+          
+          
+          
+          
+          
+          
+            </main>
+      
+      
+            <footer class="w-100 bg-secondary bg-opacity-100 d-flex justify-content-center border border-primary">
+              <p class="text-center w-100 fs-4"> © 2021 Data Insight Group | All Rights Reserved</p>
+            
+            </footer>
+  </div>        
+          
+            <script src="https://unpkg.com/vue@3"></script>
+            <script src="./script/mainjs.js"></script>
+            
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attendance house</title>
+
+    <link rel="stylesheet" href="./style/mainStyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+<body class="bg-info bg-opacity-10 attendance general" id="house" >
+
+
+  <div class="box">
+    <div class="cat">
+      <div class="cat__body"></div>
+      <div class="cat__body"></div>
+      <div class="cat__tail"></div>
+      <div class="cat__head"></div>
+    </div>
+  </div>
+
+  <div id="app">
+    
+  <header class="d-flex flex-wrap">
+      
+    <div  class="w-25 ">
+      
+      <img id="logo" src="./asets/data-insight.png" alt="logo">
+    </div>
+     <div class="w-50 justify-content-center align-items-center">
+              <h1 class="h1 text-center pt-5">Data Insight group</h1>
+    </div>
+    <div class="w-25 d-flex justify-content-center align-items-center">
+
+   
+
+      <a class="fs-4 text-decoration-none fst-italic" href="https://www.whitehouse.gov/the_press_office/TransparencyandOpenGovernment">📩Info Data Insight</a>
+    
+    </div>
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary  navbarAncho" id="navBar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+         
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Congress 113
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="./house.html">House</a></li>
+                <li><a class="dropdown-item" href="./senate.html">Senate</a></li>
+              
+              </ul>
+            </li>
+            
+          </ul>
+          <ul class="navbar-nav">
+         
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Attendance
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="./attendance-house.html">House</a></li>
+                <li><a class="dropdown-item" href="./attendance-senate.html">Senate</a></li>
+              
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+         
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Party Loyality
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="./loyality-house.html">House</a></li>
+                  <li><a class="dropdown-item" href="./loyality-senate.html">Senate</a></li>
+                
+                </ul>
+              </li>
+            </ul>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+    
+
+
+  <main class="d-flex col-12 flex-wrap justify-content-center justify-self-center text-justify">
+
+    <article class="col-5  mt-4">
+      <h3 class="text-center ">Attendance</h3>
+      <p class ="text-justify text-center">The Constitution specifies that a majority of members constitutes a quorum to do business in each house. Representatives and senators rarely force the presence of a quorum by demanding quorum calls; thus, in most cases, debates continue even if a majority is not present.</p>
+      <p class ="text-justify text-center"> The Senate uses roll-call votes; a clerk calls out the names of all the senators, each senator stating "aye" or "no" when his or her name is announced. The House reserves roll-call votes for the most formal matters, as a roll-call of all 435 representatives takes quite some time; normally, members vote by electronic device. In the case of a tie, the motion in question fails. In the Senate, the Vice President may (if present) cast the tiebreaking vote.</p>
+  
+    </article>
+
+    <div class="col-5 ms-5 mt-4">
+
+      <h3 class="text-center ">House at a glance</h3>
+
+      <table class="table table-bordered table-primary table-hover col-3 ">
+        <thead class="table-dark ">
+          <tr>
+            <th class="text-center">Party</th>
+            <th class="text-center">Number of Reps	</th>
+            <Th class="text-center">% Voted with Prty</Th>
+          </tr>
+        </thead>
+
+        <tbody id="tablaGeneralDemocratasYRepublicanos">
+          <tr>
+            <td class="text-center">Democratas</td>
+            <td class="text-center">{{D}}</td>
+            <td class="text-center">{{votedWithPartyD}}%</td>
+
+          </tr>
+      
+          <tr>
+            <td class="text-center">Republicanos</td>
+            <td class="text-center">{{R}}</td>
+            <td class="text-center">{{votedWithPartyR}}%</td>
+          </tr>
+          <tr>
+            <td class="text-center">Independientes</td>
+            <td class="text-center">{{I}}</td>
+            <td class="text-center">{{votedWithPartyI || "0"}}%</td>
+          </tr>
+          <tr>
+            <td class="text-center">Total</td>
+            <td class="text-center">{{total}}</td>
+            <td class="text-center">{{porcentajeTotal}}%</td>
+          </tr>
+
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+
+    <div class="col-5 mt-4">
+
+      <h2>Least Engaged (Bottom 10% Attendance)</h2>
+
+      
+
+      <table class="w-75 table table-bordered table-primary table-hover ">
+
+        <thead class="table-dark "> 
+          <tr>
+            <th class="text-center">Name</th>
+            <th class="text-center">Number of Missed Votes</th>
+            <th class="text-center">% Missed</th>
+          </tr>
+        </thead>
+
+
+        <tbody id="menosPresencialidad">
+
+          <tr  v-for="miembro in menorPresentismo()">
+
+            <td class="text-center">
+              <a  v-bind:href="miembro.url">{{miembro.first_name}} {{miembro.middle_name || " "}}
+                {{miembro.last_name}}</a>
+                
+            </td>
+            <td class="text-center">
+              {{miembro.missed_votes}}
+            </td>
+ 
+            <td class="text-center">{{miembro.missed_votes_pct}}%</td>
+
+
+          </tr>
+          
+
+
+
+
+        </tbody>
+
+
+
+
+
+      </table>
+
+    </div>
+
+    <div class="col-5 ms-5 mt-4">
+
+      <h2>Most Engaged (Top 10% Attendance)</h2>
+
+      <table class="w-75 table table-bordered table-primary table-hover ">
+
+        <thead class="table-dark "> 
+          <tr>
+            <th class="text-center">Name</th>
+            <th class="text-center">Number of Missed Votes</th>
+            <th class="text-center">% Missed</th>
+          </tr>
+        </thead>
+
+        
+
+
+        <tbody id="masPresencialidad">
+        <tr v-for="miembro in mayorPresentismo()">
+            <td class="text-center">
+              <a v-bind:href="miembro.url">{{miembro.first_name}} {{miembro.middle_name || " "}}
+                {{miembro.last_name}}</a>
+            </td>
+            <td class="text-center">
+              {{miembro.missed_votes}}
+            </td>
+            <td class="text-center">
+              {{miembro.missed_votes_pct}}%
+            </td>
+
+          </tr>
+
+
+
+
+        </tbody>
+
+
+
+
+
+      </table>
+
+
+
+    </div>
+
+
+
+
+
+
+
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="w-100 bg-secondary bg-opacity-100 d-flex justify-content-center  border border-primary">
+    <p class="text-center w-100 fs-4"> © 2021 Data Insight Group | All Rights Reserved</p>
+  
+  </footer>
+</div>
+
+
+
+
+
+  <!-- <script src="./script/house.js"></script>
+  <script src="./script/attendance.js"></script> -->
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="./script/mainjs.js"></script>
+
+</body>
+</html>

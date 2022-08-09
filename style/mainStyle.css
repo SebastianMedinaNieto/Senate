@@ -1,0 +1,117 @@
+
+header img{
+ width: 10vw;
+
+
+}
+.navbarAncho{
+
+    width: 100%;
+    border: 3px solid black;
+    
+}
+
+#logo{
+margin-left: 1vw;
+width: 10rem;
+}
+h1.h1{
+
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 5vh;
+
+  text-transform: uppercase;
+
+  color: #131313;
+  
+
+}
+.bg-primary{
+
+    background-color: aliceblue;
+
+}
+aside {
+    margin-top: 10vh;
+    margin-left: 10vw;
+    width: 40%;
+}
+
+
+
+
+aside img{
+
+    width: 30vw;
+}
+
+#contenedorTexto {
+  
+    width: 100%;
+}
+
+label{
+    font-size: 2vh;
+    margin-left: 9vw;
+
+}
+form{
+    
+    padding-top: 1vh;
+
+
+
+}
+#cuerpo {
+    min-height: 72vh;
+}
+form select{
+    height: 3vh;
+    width: 49.5vw;
+    margin-bottom: 0.5vh;
+    text-align: center;
+    font-size: 2vh;
+    
+
+}
+
+@media(max-width: 1500px) {
+    
+    section{
+        width: 90% !important;
+    }
+
+    
+    #form{
+        width: 90% !important;
+    }
+
+
+
+}
+
+@media(max-width: 1000px){
+
+    #table{
+        width: 90% !important;
+    }
+}
+
+@media (max-width: 800px){
+
+    #principal{
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .tablita{
+        width: 90% !important;
+    }
+}
+
+
+article > p {
+    color: red
+}
+
